@@ -17,12 +17,8 @@
       <input type="text" formControlName="base">
     </div><br>
     <div>
-      <label for="">is perishable</label>
-      <input type="radio" formControlName="is_perishable" value="true">
-    </div><br>
-    <div>
       <label for="">is negative</label>
-      <input type="checkbox" formControlName="is_negative" value="true">
+      <input type="checkbox" formControlName="is_negative" value="true" >
     </div><br>
     
     <div formGroupName="item_details">
@@ -44,13 +40,17 @@
       </div><br>
       <div>
         <label for="">Branches id </label>
-        <input type="text" formControlName="Branches_id">
+        <input type="text" formControlName="branches_id">
+      </div><br>
+      <div>
+        <label for="">is perishable</label>
+        <input type="checkbox" formControlName="is_perishable" value="true" >
       </div><br>
 
     </div>
 
     <div>
-      <label for="">Branches id </label>
+      <label for="">Category id </label>
       <input type="text" formControlName="category_ids">
     </div><br>
 

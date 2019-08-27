@@ -15,29 +15,31 @@ export class AppComponent {
 
 
  testForm = this.formBuilder.group({
-   name: ['Test Item2'],
-   taxes_id: [17],
-   units_id: [1],
-   base: [750],
-   is_perishable: [],
-   is_negative: [],
+   name: [''],
+   taxes_id: ['17'],
+   units_id: ['1'],
+   base: ['750'],
+   is_negative: [''],
    item_details: this.formBuilder.group({
-     price: [10],
-     hsn_code: [],
-     min: [2],
-     max: [10],
-     Branches_id: [16]
+     price: ['10'],
+     hsn_code: [''],
+     min: ['2'],
+     max: ['10'],
+     branches_id: ['16'],
+     is_perishable: [''],
    }),
-   category_ids: [[116]]
+   category_ids: [['116']]
  });
 
 onSubmit() {
   console.log(this.testForm.value);
   this.testingService.test(this.testForm.value).subscribe(
     res => {
-      console.log(res);
+      window.alert(res.message);
     },
-    err => {}
+    err => {
+      console.log(err);
+    }
   );
 }
 }
